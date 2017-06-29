@@ -34,7 +34,7 @@ namespace SeleniumAutomationPractice
         [Then(@"I should see an error saying an email address is required")]
         public void ThenIShouldSeeAnErrorSayingAnEmailAddressIsRequired()
         {
-            Assert.Equal("An email address required.", _signInPage.EmailAddressRequiredErrorMessage());
+            Assert.Equal("An email address required.", _signInPage.EmailAddressRequiredErrorMessage);
         }
 
         [AfterScenario]

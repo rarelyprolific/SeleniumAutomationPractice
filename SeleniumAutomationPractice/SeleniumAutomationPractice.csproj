@@ -65,7 +65,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjectModels\CartPage.cs" />
+    <Compile Include="PageObjectModels\TShirtsPage.cs" />
+    <Compile Include="TestScenarios\AddingTShirtToBasketSteps.cs" />
     <Compile Include="PageObjectModels\SignInPage.cs" />
+    <Compile Include="TestScenarios\AddingTShirtToBasket.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddingTShirtToBasket.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestScenarios\LoggingInSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestScenarios\LoggingIn.feature.cs">
@@ -77,6 +85,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestScenarios\AddingTShirtToBasket.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddingTShirtToBasket.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestScenarios\LoggingIn.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoggingIn.feature.cs</LastGenOutput>

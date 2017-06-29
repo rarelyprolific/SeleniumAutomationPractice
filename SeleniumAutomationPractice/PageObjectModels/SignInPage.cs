@@ -18,7 +18,7 @@ namespace SeleniumAutomationPractice.PageObjectModels
             return new SignInPage(driver);
         }
 
-        public string EmailAddressRequiredErrorMessage() => _driver.FindElement(By.XPath("//*[@id='center_column']/div[1]/ol/li")).Text;
+        public string EmailAddressRequiredErrorMessage => _driver.FindElement(By.XPath("//*[@id='center_column']/div[1]/ol/li")).Text;
 
         public void ClickSignInButton()
         {
