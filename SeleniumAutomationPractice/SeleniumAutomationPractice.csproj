@@ -37,6 +37,7 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -81,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoggingIn.feature</DependentUpon>
     </Compile>
+    <Compile Include="WebDriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

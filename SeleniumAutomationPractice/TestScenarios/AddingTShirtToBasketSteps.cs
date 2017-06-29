@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using SeleniumAutomationPractice.PageObjectModels;
-using System;
+using System.Configuration;
 using System.Threading;
 using TechTalk.SpecFlow;
 using Xunit;
@@ -18,8 +17,7 @@ namespace SeleniumAutomationPractice
         [BeforeScenario]
         public void Setup()
         {
-            //TODO: Create a WebDriver factory so we can return a Firefox, Chrome or IE.etc. driver based on config!
-            _driver = new ChromeDriver();
+            _driver = WebDriverFactory.Create(ConfigurationManager.AppSettings["BrowserDriver"]);
         }
 
         [Given(@"I am in the t-shirts page")]
