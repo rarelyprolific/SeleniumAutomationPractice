@@ -1,6 +1,5 @@
-﻿using OpenQA.Selenium;
-using SeleniumAutomationPractice.PageObjectModels;
-using System.Configuration;
+﻿using SeleniumAutomationPractice.PageObjectModels;
+using SeleniumAutomationPractice.TestScenarios;
 using System.Threading;
 using TechTalk.SpecFlow;
 using Xunit;
@@ -8,17 +7,10 @@ using Xunit;
 namespace SeleniumAutomationPractice
 {
     [Binding]
-    public class AddingTShirtToBasketSteps
+    public class AddingTShirtToBasketSteps : TestScenario
     {
-        private IWebDriver _driver;
         private TShirtsPage _tShirtsPage;
         private CartPage _cartPage;
-
-        [BeforeScenario]
-        public void Setup()
-        {
-            _driver = WebDriverFactory.Create(ConfigurationManager.AppSettings["BrowserDriver"]);
-        }
 
         [Given(@"I am in the t-shirts page")]
         public void GivenIAmInTheT_ShirtsPage()
@@ -45,12 +37,6 @@ namespace SeleniumAutomationPractice
         {
             Thread.Sleep(1000); //TODO: Get rid of this later when I figure out how to get WebDriver to wait for DOM changes/page loads
             Assert.Equal("1 Product", _cartPage.ProductCountText);
-        }
-
-        [AfterScenario]
-        public void Teardown()
-        {
-            _driver.Dispose();
         }
     }
 }

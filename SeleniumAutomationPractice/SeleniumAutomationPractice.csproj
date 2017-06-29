@@ -82,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoggingIn.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestScenarios\TestScenario.cs" />
     <Compile Include="WebDriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>
